@@ -1,0 +1,89 @@
+- Move bootstrap resource links out into Modules.groovy definition file and import into gsp or layout template...
+- look at definition of why the createLinkTo tag is useful for locating resource
+- sor out img resources as well, eg.
+  (index.gsp): <img src="${createLinkTo(dir:'img',file:'logo.png')}" alt="logo" />
+  lines 26, 72, 100, 106, 137, 140, 161, 303, 324, 396, 397, 398
+  Should I use <r: img> tag instead?
+- sort out the images / img directories into one.
+- see if there are any more resources required from 'measure' .. eg. artwork directory??
+
+- need to sort out in head:
+ <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+- jquery js goes in head for some reason.
+ 
+- TODO: Look at developer tool to inspect css when wanting to modify it
+
+- // What URL patterns should be processed by the resources plugin
+grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*']
+
+- ** Try and run AdvertWise to see how code relates to look and feel ** 
+
+- Put header and footer into a template file (instead of repeating on every page)
+
+- Need to sort out main.gsp layout (especially as it looked like /login call was using the main layout instead of the login layout:
+
+Caused by GrailsTagException: Error executing tag <r:layoutResources>: No module found with name [bootstrap-signin]
+->>  18 | doCall  in /grails-app/views/layouts/main.gsp
+
+- I think slow to generate the login page because no internet connection and page contains:
+
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+- Sort out the logo home link on all pages:
+
+          	<a class="brand" href="index.html">
+                <img src="${resource(dir:'img',file:'logo.png')}" alt="logo" />
+            </a>
+            
+- What should i do with the inline css in head on auth.gsp??
+
+- Don't forget i have commented out the url to google fonts in head on auth.gsp / reset.gsp. What to do about these?
+
+- Have added _header.gsp / _footer.gsp to layout templates. Make sure don't put a footer where don't want one (at moment 
+they are not included in login.gsp or user.gsp but could be i suppose)
+
+
+- Could i turn the <g:if test > tag on the tabs in expertise/index.html into it's own tag-library tag for DRY?
+- How to make the tab-pane content visible when the tab is active on first page load?
+
+
+
+USE CASES:
+----------
+
+1. Send email via RESTful call to Java webservice.
+
+   gwizz-services
+
+2. Can I use my own phone account to send SMS (how does it work at CSL)?
+
+3. How to set HTML <head> formatting in STS?
+
+4. Enable and use home_fix.gsp in layouts
+
+5. Use Spring Security plugin to allow Zhaleh to login to Admin dashboard:
+   - make appointments using Full Calendar plugin 
+   - send request to her Calendar app (Google, Yahoo?) to schedule the appointment there as well
+   
+   - add articles
+   - add testimonials
+   - review and delete comments if necessary
+   
+ 6. Plugin names??
+ 
+     grails-paddycakes-core 
+     grails-gwizz-core
+     grails-gunit-core
+     
+   - common functionality (Spring Security login - with default measure theme. That can be overriden by applications if necessary (eg. auth.gsp, denied.gsp)
+   - TestimonialsController ...
+
+7. Make sure source jars are properly downloaded and can be easily seen:
+
+   grails refresh-dependencies --include-source
+   
+8. If logged in then show a logout button somewhere
+
+9. Dynamically add comments. So they need to be saved and loaded.
+   
+   
