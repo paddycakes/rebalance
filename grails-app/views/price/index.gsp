@@ -19,7 +19,12 @@
                 <hr class="right visible-desktop">
             </h2>
 
-
+            <h3>Fees</h3>
+            <ul>
+                <li>£90 per an hour face to face session</li>
+                <li>£30 per an hour video Skype session</li>
+                <li>Concession are considered for students an those on benefits.</li>
+            </ul>
 
         </div>
     </div>

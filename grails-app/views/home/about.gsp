@@ -18,6 +18,35 @@
                 <span>About Me</span>
                 <hr class="right visible-desktop">
             </h2>
+            
+            <h3>Profile</h3>
+            
+            <p>Zhaleh Rabiei, MA, Doctorate student in counselling Psychology and Psychotherapy, 
+            A graduate member of BPS (MBPsS/ GBC), a student member with UKCP.</p>
+            <p>I work as an integrative counsellor and psychotherapist. I can offer a confidential, 
+            non judgmental and deeply respectful service.</p>
+            
+            <h3>Training, Qualification, and Experience</h3>
+            
+            <ul>
+                <li>Doctorate student in counselling Psychology and Psychotherapy</li>
+                <li>Graduate Diploma in Psychology</li>
+                <li>Master Degree in Psychology</li>
+                <li>Certificate in Person Centred Counselling Skills</li>
+                <li>Certificate in Drama therapy</li>
+            </ul>
+            
+            Other training courses completed:
+            <ul>
+                <li>NLP</li>
+                <li>Mediation</li>
+                <li>Mentoring</li>
+                <li>Meditation and relaxation</li>
+                <li>Mindfulness</li>
+                <li>Focusing</li>
+                <li>ISTPD: Intensive Short Term Dynamic Psychotherapy</li> 
+            </ul>
+            I have experience in working in Edgware Hospital, private practice, and voluntary agencies.
 
 
 

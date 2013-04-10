@@ -19,7 +19,6 @@ grails.project.dependency.resolution = {
     }
     log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
-    legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
@@ -54,6 +53,8 @@ grails.project.dependency.resolution = {
 		compile ":spring-security-core:1.2.7.3"
 		compile ":concordion:0.1.2"
 		compile	":cache:1.0.1"
+		
+		test ":spock:0.7"
 		
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.8.3"

@@ -1,19 +1,20 @@
 package com.rabiei.rebalance.domain
 
-
-
 import grails.test.mixin.*
-import org.junit.*
-
-import com.rabiei.rebalance.domain.Article;
+import spock.lang.Specification
 
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
  */
-@TestFor(Article)
-class ArticleTests {
+@TestFor(Email)
+class EmailSpec extends Specification {
 
-    void testSomething() {
-       fail "Implement me"
-    }
+	def setup() {
+	}
+
+	def cleanup() {
+	}
+
+	void "test something"() {
+	}
 }
