@@ -26,6 +26,11 @@
             <p>I work as an integrative counsellor and psychotherapist. I can offer a confidential, 
             non judgmental and deeply respectful service.</p>
             
+            <h3>Areas of counselling I focus on</h3>
+            <ul>
+                <g:render template="/common/focusAreas"/>
+            </ul>
+            
             <h3>Training, Qualification, and Experience</h3>
             
             <ul>
@@ -46,9 +51,9 @@
                 <li>Focusing</li>
                 <li>ISTPD: Intensive Short Term Dynamic Psychotherapy</li> 
             </ul>
-            I have experience in working in Edgware Hospital, private practice, and voluntary agencies.
-
-
+            
+            <h3>Experience</h3>
+            <p>I have experience in working in Edgware Hospital, private practice, and voluntary agencies. MENTION FARSIPHONE</p>
 
         </div>
     </div>

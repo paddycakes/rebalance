@@ -25,7 +25,18 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "update"
+			// Using Postgres for Heroku production deployment
+			dbCreate = "update"
+			driverClassName = "org.postgresql.Driver"
+			dialect = org.hibernate.dialect.PostgreSQLDialect
+		
+			uri = new URI(System.env.DATABASE_URL?:"postgres://test:test@localhost/test")
+	
+			url = "jdbc:postgresql://"+uri.host+uri.path
+			username = uri.userInfo.split(":")[0]
+			password = uri.userInfo.split(":")[1]
+			
+/*          dbCreate = "update"
             url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
             pooled = true
             properties {
@@ -37,7 +48,7 @@ environments {
                testWhileIdle=true
                testOnReturn=true
                validationQuery="SELECT 1"
-            }
+            }*/
         }
     }
 }
