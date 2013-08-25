@@ -18,7 +18,7 @@ class User {
 	}
 
 	static mapping = {
-		table '`user`'
+		table "`user`"
 		password column: '`password`'
 	}
 	
